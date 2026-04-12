@@ -13,174 +13,209 @@
         <div class="logo">ENCA<span>24</span></div>
     </nav>
 
-    <header class="hero">
-        <h1>Curso Profesional de full stack</h1>
-        <p>Dirgido por el Maestro Jorgue Mario Rincon.</p>
-        <div class="badge">Enca2026</div>
+    <!-- PANTALLA DE BIENVENIDA -->
+    <div id="welcome-screen">
+        <div class="welcome-container">
+            <div class="welcome-card">
+                <h1>Bienvenido al Curso de <span class="green">Desarrollo Full Stack con React</span></h1>
+                <p class="subtitle">Elaborado por el <strong>Maestro Jorge Mario Rincon</strong> en colaboracion con sus estudiantes mas destacados:</p>
+                <p class="colabores">Carlos Alberto - Francisco Javier - Juan Sebastian</p>
+                <div class="question">
+                    <h2>Que deseas hacer hoy?</h2>
+                </div>
+                <div class="options">
+                    <div class="option-card" id="btn-grabadas">
+                        <h3>Ver el historial de las clases grabadas</h3>
+                    </div>
+                    <div class="option-card" id="btn-fundamentos">
+                        <h3>Fundamentos de programacion</h3>
+                    </div>
+                    <div class="option-card" id="btn-intereses">
+                        <h3>Links de interes</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-        <div class="colaboradores">
-            <h3>Colaboradores</h3>
+    <!-- PANTALLA DE CLASES GRABADAS -->
+    <div id="clases-screen" class="hidden">
+        <div class="back-btn" id="back-home-clases">Volver al inicio</div>
+        <header class="hero">
+            <h1>Curso Profesional de full stack</h1>
+            <p>Dirigido por el Maestro Jorge Mario Rincon.</p>
+            <div class="badge">Enca2026</div>
+            <div class="colaboradores">
+                <h3>Colaboradores</h3>
+                <ul>
+                   <li>Juan Sebastian/ Carlos Alberto/ Francisco Javier</li>
+                </ul>
+            </div>
+        </header>
+        <main class="container">
+            <section class="timeline">
+                <div class="month-group">
+                    <div class="month-header" onclick="toggleMonth(this)">
+                        <div class="month-title">Marzo 2026</div>
+                        <span class="icon">▼</span>
+                    </div>
+                    <div class="month-content">
+                        <a href="https://youtu.be/Ftiea-WYZKk" target="_blank" class="course-card">
+                            <div class="date">18 Mar</div>
+                            <div class="info">
+                                <h3>Configuración Inicial</h3>
+                                <p>Instalación y entorno de desarrollo.</p>
+                            </div>
+                            <div class="status">Ver clase</div>
+                        </a>
+                        <a href="https://www.youtube.com/watch?v=2t4RstXJqnk" target="_blank" class="course-card">
+                            <div class="date">18 Mar</div>
+                            <div class="info">
+                                <h3>Navegación en Terminal</h3>
+                                <p>Comandos esenciales para moverte como pro.</p>
+                            </div>
+                            <div class="status">Ver clase</div>
+                        </a>
+                        <a href="https://www.youtube.com/watch?v=2t4RstXJqnk" target="_blank" class="course-card">
+                            <div class="date">20 Mar</div>
+                            <div class="info">
+                                <h3>Gestión de Archivos</h3>
+                                <p>Creación y manipulación desde consola.</p>
+                            </div>
+                            <div class="status">Ver clase</div>
+                        </a>
+                        <a href="https://www.youtube.com/watch?v=5qz4SFrPItw&t=1s" target="_blank" class="course-card">
+                            <div class="date">25 Mar</div>
+                            <div class="info">
+                                <h3>Introducción Práctica a Git: Gestión de Archivos y Comandos Básicos</h3>
+                                <p>Entendiendo el Stage, Commit y Log.</p>
+                            </div>
+                            <div class="status">Ver clase</div>
+                        </a>
+                        <a href="https://youtu.be/khxhJ8weFis" target="_blank" class="course-card">
+                            <div class="date">25 Mar</div>
+                            <div class="info">
+                                <h3>Introducción a Comandos de Terminal y Gestión de Archivos con Git</h3>
+                                <p>Flujos de trabajo paralelos.</p>
+                            </div>
+                            <div class="status">Ver clase</div>
+                        </a>
+                        <a href="https://youtube.com/watch?v=gvtAFSBh4xc&feature=youtu.be" target="_blank" class="course-card">
+                            <div class="date">26 Mar</div>
+                            <div class="info">
+                                <h3>Primeros Pasos con Git: Manejo de Archivos y Repositorios</h3>
+                                <p>Fundamentos Git: init, add y commit básicos.</p>
+                            </div>
+                            <div class="status">Ver clase</div>
+                        </a>
+                    </div>
+                </div>
+                <div class="month-group">
+                    <div class="month-header" onclick="toggleMonth(this)">
+                        <div class="month-title">Abril 2026</div>
+                        <span class="icon">▼</span>
+                    </div>
+                    <div class="month-content">
+                        <a href="https://www.youtube.com/watch?v=TQUvxF-h9D4" target="_blank" class="course-card">
+                            <div class="date">08 Abr</div>
+                            <div class="info">
+                                <h3>Configuración de Visual Studio Code para Desarrollo Web</h3>
+                                <p>Configuración inicial de entorno en Visual Studio Code</p>
+                            </div>
+                            <div class="status">Ver clase</div>
+                        </a>
+                        <a href="https://www.youtube.com/watch?v=kMHqKAUXsco" target="_blank" class="course-card">
+                            <div class="date">08 Abr</div>
+                            <div class="info">
+                                <h3>Algoritmos GIT Expo - Clase de Desarrollo Web</h3>
+                                <p>Diseño web con HTML y CSS.</p>
+                            </div>
+                            <div class="status">Ver clase</div>
+                        </a>
+                        <a href="https://www.youtube.com/watch?v=fYjwe9ky2oI" target="_blank" class="course-card">
+                            <div class="date">09 Abr</div>
+                            <div class="info">
+                                <h3>Git Avanzado</h3>
+                                <p>Rebase, Stash y comandos de rescate.</p>
+                            </div>
+                            <div class="status">Ver clase</div>
+                        </a>
+                        <a href="https://www.youtube.com/watch?v=V6eyFytgfbM" target="_blank" class="course-card">
+                            <div class="date">10 Abr</div>
+                            <div class="info">
+                                <h3>Configuración HTML, CSS y XAMPP</h3>
+                                <p>Configuración básica de entornos web usando XAMPP.</p>
+                            </div>
+                            <div class="status">Ver clase</div>
+                        </a>
+                        <a href="https://www.youtube.com/watch?v=q9yk0U9vtcc" target="_blank" class="course-card">
+                            <div class="date">10 Abr</div>
+                            <div class="info">
+                                <h3>Introducción al Campus Virtual y Cursos MOOC</h3>
+                                <p>Guía de acceso a la plataforma virtual de aprendizaje.</p>
+                            </div>
+                            <div class="status">Ver clase</div>
+                        </a>
+                        <a href="#" target="_blank" class="course-card">
+                            <div class="date">15 Abr</div>
+                            <div class="info">
+                                <h3>Titulo pendiente</h3>
+                                <p>Pendiente la descripcion del titulo.</p>
+                            </div>
+                            <div class="status">Ver clase</div>
+                        </a>
+                        <a href="#" target="_blank" class="course-card">
+                            <div class="date">16 Abr</div>
+                            <div class="info">
+                                <h3>Titulo pendiente</h3>
+                                <p>Pendiente la descripcion del titulo.</p>
+                            </div>
+                            <div class="status">Ver clase</div>
+                        </a>
+                        <a href="#" target="_blank" class="course-card">
+                            <div class="date">17 Abr</div>
+                            <div class="info">
+                                <h3>Titulo pendiente</h3>
+                                <p>Pendiente la descripcion del titulo.</p>
+                            </div>
+                            <div class="status">Ver clase</div>
+                        </a>
+                        <a href="#" target="_blank" class="course-card">
+                            <div class="date">21 Abr</div>
+                            <div class="info">
+                                <h3>Titulo pendiente</h3>
+                                <p>Pendiente la descripcion del titulo.</p>
+                            </div>
+                            <div class="status">Ver clase</div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- PANTALLA FUNDAMENTOS -->
+    <div id="fundamentos-screen" class="info-panel hidden">
+        <div class="back-btn" id="back-home-fundamentos">Volver al inicio</div>
+        <div class="info-box">
+            <h2>Estamos trabajando en ello todavia</h2>
+        </div>
+    </div>
+
+    <!-- PANTALLA LINKS -->
+    <div id="links-screen" class="info-panel hidden">
+        <div class="back-btn" id="back-home-links">Volver al inicio</div>
+        <div class="links-box">
+            <h2>Links de interes</h2>
             <ul>
-                <li>Juan Sebastian/ Carlos Alberto/ Francisco Javier</li>
+                <li><a href="https://www.w3schools.com/" target="_blank">Aprende diferentes lenguajes de programacion</a></li>
+                <li><a href="https://www.tutorialesprogramacionya.com/" target="_blank">Mis primeros pasos en la programación</a></li>
+                <li><a href="https://docs.emmet.io/cheat-sheet/" target="_blank">Comandos de programacion</a></li>
+                <li><a href="https://drive.google.com/drive/folders/1EQrk3M6dc4rTGN1gEiUSbTfr-qg_EiPg/" target="_blank">Recomenado por Francisco Javier</a></li>
+                <li><a href="https://virtual.bellasartes.edu.co/login/index.php/" target="_blank">Fundamentos de programacion por Jorge Mario (Bellas artes)  </a></li>
             </ul>
         </div>
-    </header>
-
-    <main class="container">
-        <section class="timeline">
-            
-            <div class="month-group">
-                <div class="month-header" onclick="toggleMonth(this)">
-                    <div class="month-title">Marzo 2026</div>
-                    <span class="icon">▼</span>
-                </div>
-                <div class="month-content">
-                    <a href="https://youtu.be/Ftiea-WYZKk" target="_blank" class="course-card">
-                        <div class="date">18 Mar</div>
-                        <div class="info">
-                            <h3>Configuración Inicial</h3>
-                            <p>Instalación y entorno de desarrollo.</p>
-                        </div>
-                        <div class="status">Ver clase</div>
-                    </a>
-
-                    <a href="https://www.youtube.com/watch?v=2t4RstXJqnk" target="_blank" class="course-card">
-                        <div class="date">18 Mar</div>
-                        <div class="info">
-                            <h3>Navegación en Terminal</h3>
-                            <p>Comandos esenciales para moverte como pro.</p>
-                        </div>
-                        <div class="status">Ver clase</div>
-                    </a>
-
-                    <a href="https://www.youtube.com/watch?v=2t4RstXJqnk" target="_blank" class="course-card">
-                        <div class="date">20 Mar</div>
-                        <div class="info">
-                            <h3>Gestión de Archivos</h3>
-                            <p>Creación y manipulación desde consola.</p>
-                        </div>
-                        <div class="status">Ver clase</div>
-                    </a>
-
-                    <a href="https://www.youtube.com/watch?v=5qz4SFrPItw&t=1s" target="_blank" class="course-card">
-                        <div class="date">25 Mar</div>
-                        <div class="info">
-                            <h3>Introducción Práctica a Git: Gestión de Archivos y Comandos Básicos</h3>
-                            <p>Entendiendo el Stage, Commit y Log.</p>
-                        </div>
-                        <div class="status">Ver clase</div>
-                    </a>
-
-                    <a href="https://youtu.be/khxhJ8weFis" target="_blank" class="course-card">
-                        <div class="date">25 Mar</div>
-                        <div class="info">
-                            <h3>"Introducción a Comandos de Terminal y Gestión de Archivos con Git"</h3>
-                            <p>Flujos de trabajo paralelos.</p>
-                        </div>
-                        <div class="status">Ver clase</div>
-                    </a>
-
-                    <a href="https://youtube.com/watch?v=gvtAFSBh4xc&feature=youtu.be" target="_blank" class="course-card">
-                        <div class="date">26 Mar</div>
-                        <div class="info">
-                            <h3>Primeros Pasos con Git: Manejo de Archivos y Repositorios</h3>
-                            <p>Fundamentos Git: init, add y commit básicos.</p>
-                        </div>
-                        <div class="status">Ver clase</div>
-                    </a>
-                </div>
-            </div>
-
-            <div class="month-group">
-                <div class="month-header" onclick="toggleMonth(this)">
-                    <div class="month-title">Abril 2026</div>
-                    <span class="icon">▼</span>
-                </div>
-                <div class="month-content">
-                    <a href="https://www.youtube.com/watch?v=TQUvxF-h9D4" target="_blank" class="course-card">
-                        <div class="date">08 Abr</div>
-                        <div class="info">
-                            <h3>Configuración de Visual Studio Code para Desarrollo Web</h3>
-                            <p>Configuración inicial de entorno en Visual Studio Code</p>
-                        </div>
-                        <div class="status">Ver clase</div>
-                    </a>
-
-                    <a href="https://www.youtube.com/watch?v=kMHqKAUXsco" target="_blank" class="course-card">
-                        <div class="date">08 Abr</div>
-                        <div class="info">
-                            <h3>Algoritmos GIT Expo - Clase de Desarrollo Web</h3>
-                            <p>Diseño web con HTML y CSS..</p>
-                        </div>
-                        <div class="status">Ver clase</div>
-                    </a>
-
-                    <a href="https://www.youtube.com/watch?v=fYjwe9ky2oI" target="_blank" class="course-card">
-                        <div class="date">09 Abr</div>
-                        <div class="info">
-                            <h3>Git Avanzado</h3>
-                            <p>Rebase, Stash y comandos de rescate.</p>
-                        </div>
-                        <div class="status">Ver clase</div>
-                    </a>
-
-                    <a href="https://www.youtube.com/watch?v=V6eyFytgfbM" target="_blank" class="course-card">
-                        <div class="date">10 Abr</div>
-                        <div class="info">
-                            <h3>:Configuración HTML, CSS y XAMPP</h3>
-                            <p>Configuración básica de entornos web usando XAMPP.</p>
-                        </div>
-                        <div class="status">Ver clase</div>
-                    </a>
-
-                    <a href="https://www.youtube.com/watch?v=q9yk0U9vtcc" target="_blank" class="course-card">
-                        <div class="date">10 Abr</div>
-                        <div class="info">
-                            <h3>Introducción al Campus Virtual y Cursos MOOC</h3>
-                            <p>Guía de acceso a la plataforma virtual de aprendizaje.</p>
-                        </div>
-                        <div class="status">Ver clase</div>
-                    </a>
-
-                    <a href="#" target="_blank" class="course-card">
-                        <div class="date">15 Abr</div>
-                        <div class="info">
-                            <h3>Titulo pendiente</h3>
-                            <p>Pendiente la descripcion del titulo.</p>
-                        </div>
-                        <div class="status">Ver clase</div>
-                    </a>
-
-                    <a href="#" target="_blank" class="course-card">
-                        <div class="date">16 Abr</div>
-                        <div class="info">
-                            <h3>Titulo pendiente</h3>
-                            <p>Pendiente la descripcion del titulo.</p>
-                        </div>
-                        <div class="status">Ver clase</div>
-                    </a>
-
-                    <a href="#" target="_blank" class="course-card">
-                        <div class="date">17 Abr</div>
-                        <div class="info">
-                            <h3>Titulo pendiente</h3>
-                            <p>Pendiente la descripcion del titulo.</p>
-                        </div>
-                        <div class="status">Ver clase</div>
-                    </a>
-                    
-                    <a href="#" target="_blank" class="course-card">
-                        <div class="date">21 Abr</div>
-                        <div class="info">
-                            <h3>Titulo pendiente</h3>
-                            <p>Pendiente la descripcion del titulo.</p>
-                        </div>
-                        <div class="status">Ver clase</div>
-                    </a>
-                </div>
-            </div>
-        </section>
-    </main>
+    </div>
 
     <script src="script.js"></script>
 </body>
