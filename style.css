@@ -67,11 +67,54 @@ body {
     padding: 40px 20px;
 }
 
+.month-group {
+    margin-bottom: 15px;
+    background: rgba(36, 56, 91, 0.3);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.month-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    cursor: pointer;
+    background: var(--platzi-light-blue);
+    transition: background 0.3s;
+}
+
+.month-header:hover {
+    background: #2d4470;
+}
+
 .month-title {
     font-size: 1.5rem;
     font-weight: 700;
-    margin: 40px 0 20px;
     color: var(--platzi-green);
+    margin: 0;
+}
+
+.icon {
+    transition: transform 0.3s ease;
+    color: var(--platzi-green);
+    font-size: 1.2rem;
+}
+
+.month-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+    padding: 0 20px;
+}
+
+.month-group.active .month-content {
+    max-height: 2000px; /* Suficiente espacio para las clases */
+    padding: 20px;
+}
+
+.month-group.active .icon {
+    transform: rotate(180deg);
 }
 
 .course-card {
@@ -124,7 +167,6 @@ body {
     text-transform: uppercase;
 }
 
-/* Responsive */
 @media (max-width: 600px) {
     .course-card {
         flex-direction: column;
