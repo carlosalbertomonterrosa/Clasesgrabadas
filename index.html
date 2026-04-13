@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ruta de Aprendizaje: Git & GitHub</title>
+    <title>Ruta de Aprendizaje: Desarrollo Full Stack</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
@@ -18,7 +18,7 @@
         <div class="welcome-container">
             <div class="welcome-card">
                 <h1>Bienvenido al Curso de <span class="green">Desarrollo Full Stack con React</span></h1>
-                <p class="subtitle">Elaborado por el <strong>Maestro Jorge Mario Rincon</strong> en colaboracion con sus estudiantes mas destacados:</p>
+                <p class="subtitle">Elaborado por el <strong>Maestro Jorge Mario Rincon</strong> en colaboracion con sus estudiantes:</p>
                 <p class="colabores">Carlos Alberto - Francisco Javier - Juan Sebastian</p>
                 <div class="question">
                     <h2>Que deseas hacer hoy?</h2>
@@ -40,182 +40,328 @@
 
     <!-- PANTALLA DE CLASES GRABADAS -->
     <div id="clases-screen" class="hidden">
-        <div class="back-btn" id="back-home-clases">Volver al inicio</div>
         <header class="hero">
-            <h1>Curso Profesional de full stack</h1>
+            <h1>Curso Profesional de Full Stack</h1>
             <p>Dirigido por el Maestro Jorge Mario Rincon.</p>
-            <div class="badge">Enca2026</div>
-            <div class="colaboradores">
-                <h3>Colaboradores</h3>
-                <ul>
-                   <li>Juan Sebastian/ Carlos Alberto/ Francisco Javier</li>
-                </ul>
-            </div>
+            <div class="badge">ENCA 2026</div>
         </header>
         <main class="container">
-            <section class="timeline">
-                <div class="month-group">
+            <div class="search-bar-container">
+                <input type="text" id="search-input" placeholder="Buscar clase por titulo o descripcion..." class="search-input">
+            </div>
+            
+            <div id="progress-container" class="progress-container">
+                <div class="progress-text" id="progress-text">Cargando progreso...</div>
+                <div class="progress-bar-bg"><div class="progress-bar-fill" id="progress-fill" style="width: 0%"></div></div>
+            </div>
+            
+            <section class="timeline" id="timeline">
+                
+                <!-- ========== MARZO 2026 ========== -->
+                <div class="month-group" data-mes="Marzo 2026">
                     <div class="month-header" onclick="toggleMonth(this)">
                         <div class="month-title">Marzo 2026</div>
                         <span class="icon">▼</span>
                     </div>
                     <div class="month-content">
-                        <a href="https://youtu.be/Ftiea-WYZKk" target="_blank" class="course-card">
+                        <div class="course-card">
                             <div class="date">18 Mar</div>
                             <div class="info">
-                                <h3>Configuración Inicial</h3>
-                                <p>Instalación y entorno de desarrollo.</p>
+                                <h3>Configuracion Inicial</h3>
+                                <p>Instalacion y entorno de desarrollo. Aprende a preparar tu computadora para programar.</p>
                             </div>
-                            <div class="status">Ver clase</div>
-                        </a>
-                        <a href="https://www.youtube.com/watch?v=2t4RstXJqnk" target="_blank" class="course-card">
+                            <div class="buttons">
+                                <a href="https://youtu.be/Ftiea-WYZKk" target="_blank" class="btn-clase">Ver clase</a>
+                                <a href="https://docs.google.com/document/d/1yB04FFz97z5lTRdM10cExVnmaeUbmFAcCr-XDZAOMy8/edit?tab=t.0" target="_blank" class="btn-codigo">Ver codigo</a>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" class="clase-checkbox" data-clase-id="18-mar-configuracion">
+                                    <span>Visto</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="course-card">
                             <div class="date">18 Mar</div>
                             <div class="info">
-                                <h3>Navegación en Terminal</h3>
-                                <p>Comandos esenciales para moverte como pro.</p>
+                                <h3>Navegacion en Terminal</h3>
+                                <p>Comandos esenciales para moverte como un profesional en la terminal.</p>
                             </div>
-                            <div class="status">Ver clase</div>
-                        </a>
-                        <a href="https://www.youtube.com/watch?v=2t4RstXJqnk" target="_blank" class="course-card">
+                            <div class="buttons">
+                                <a href="https://www.youtube.com/watch?v=2t4RstXJqnk" target="_blank" class="btn-clase">Ver clase</a>
+                                <a href="https://docs.google.com/document/d/1yB04FFz97z5lTRdM10cExVnmaeUbmFAcCr-XDZAOMy8/edit?tab=t.0" target="_blank" class="btn-codigo">Ver codigo</a>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" class="clase-checkbox" data-clase-id="18-mar-navegacion">
+                                    <span>Visto</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="course-card">
                             <div class="date">20 Mar</div>
                             <div class="info">
-                                <h3>Gestión de Archivos</h3>
-                                <p>Creación y manipulación desde consola.</p>
+                                <h3>Gestion de Archivos</h3>
+                                <p>Creacion y manipulacion de archivos desde la consola.</p>
                             </div>
-                            <div class="status">Ver clase</div>
-                        </a>
-                        <a href="https://www.youtube.com/watch?v=5qz4SFrPItw&t=1s" target="_blank" class="course-card">
+                            <div class="buttons">
+                                <a href="https://www.youtube.com/watch?v=2t4RstXJqnk" target="_blank" class="btn-clase">Ver clase</a>
+                                <a href="https://docs.google.com/document/d/1yB04FFz97z5lTRdM10cExVnmaeUbmFAcCr-XDZAOMy8/edit?tab=t.0" target="_blank" class="btn-codigo">Ver codigo</a>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" class="clase-checkbox" data-clase-id="20-mar-gestion">
+                                    <span>Visto</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="course-card">
                             <div class="date">25 Mar</div>
                             <div class="info">
-                                <h3>Introducción Práctica a Git: Gestión de Archivos y Comandos Básicos</h3>
-                                <p>Entendiendo el Stage, Commit y Log.</p>
+                                <h3>Introduccion Practica a Git</h3>
+                                <p>Entendiendo el Stage, Commit y Log. Primeros pasos con Git.</p>
                             </div>
-                            <div class="status">Ver clase</div>
-                        </a>
-                        <a href="https://youtu.be/khxhJ8weFis" target="_blank" class="course-card">
+                            <div class="buttons">
+                                <a href="https://www.youtube.com/watch?v=5qz4SFrPItw&t=1s" target="_blank" class="btn-clase">Ver clase</a>
+                                <a href="https://docs.google.com/document/d/1yB04FFz97z5lTRdM10cExVnmaeUbmFAcCr-XDZAOMy8/edit?tab=t.0" target="_blank" class="btn-codigo">Ver codigo</a>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" class="clase-checkbox" data-clase-id="25-mar-git-practica">
+                                    <span>Visto</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="course-card">
                             <div class="date">25 Mar</div>
                             <div class="info">
-                                <h3>Introducción a Comandos de Terminal y Gestión de Archivos con Git</h3>
-                                <p>Flujos de trabajo paralelos.</p>
+                                <h3>Comandos de Terminal con Git</h3>
+                                <p>Flujos de trabajo paralelos con Git y terminal.</p>
                             </div>
-                            <div class="status">Ver clase</div>
-                        </a>
-                        <a href="https://youtube.com/watch?v=gvtAFSBh4xc&feature=youtu.be" target="_blank" class="course-card">
+                            <div class="buttons">
+                                <a href="https://youtu.be/khxhJ8weFis" target="_blank" class="btn-clase">Ver clase</a>
+                                <a href="https://docs.google.com/document/d/1yB04FFz97z5lTRdM10cExVnmaeUbmFAcCr-XDZAOMy8/edit?tab=t.0" target="_blank" class="btn-codigo">Ver codigo</a>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" class="clase-checkbox" data-clase-id="25-mar-comandos">
+                                    <span>Visto</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="course-card">
                             <div class="date">26 Mar</div>
                             <div class="info">
-                                <h3>Primeros Pasos con Git: Manejo de Archivos y Repositorios</h3>
-                                <p>Fundamentos Git: init, add y commit básicos.</p>
+                                <h3>Primeros Pasos con Git</h3>
+                                <p>Fundamentos Git: init, add y commit basicos.</p>
                             </div>
-                            <div class="status">Ver clase</div>
-                        </a>
+                            <div class="buttons">
+                                <a href="https://youtube.com/watch?v=gvtAFSBh4xc&feature=youtu.be" target="_blank" class="btn-clase">Ver clase</a>
+                                <a href="https://docs.google.com/document/d/1yB04FFz97z5lTRdM10cExVnmaeUbmFAcCr-XDZAOMy8/edit?tab=t.0" target="_blank" class="btn-codigo">Ver codigo</a>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" class="clase-checkbox" data-clase-id="26-mar-primeros">
+                                    <span>Visto</span>
+                                </label>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="month-group">
+
+                <!-- ========== ABRIL 2026 ========== -->
+                <div class="month-group" data-mes="Abril 2026">
                     <div class="month-header" onclick="toggleMonth(this)">
                         <div class="month-title">Abril 2026</div>
                         <span class="icon">▼</span>
                     </div>
                     <div class="month-content">
-                        <a href="https://www.youtube.com/watch?v=TQUvxF-h9D4" target="_blank" class="course-card">
-                            <div class="date">08 Abr</div>
-                            <div class="info">
-                                <h3>Configuración de Visual Studio Code para Desarrollo Web</h3>
-                                <p>Configuración inicial de entorno en Visual Studio Code</p>
-                            </div>
-                            <div class="status">Ver clase</div>
-                        </a>
-                        <a href="https://www.youtube.com/watch?v=kMHqKAUXsco" target="_blank" class="course-card">
-                            <div class="date">08 Abr</div>
-                            <div class="info">
-                                <h3>Algoritmos GIT Expo - Clase de Desarrollo Web</h3>
-                                <p>Diseño web con HTML y CSS.</p>
-                            </div>
-                            <div class="status">Ver clase</div>
-                        </a>
-                        <a href="https://www.youtube.com/watch?v=fYjwe9ky2oI" target="_blank" class="course-card">
-                            <div class="date">09 Abr</div>
-                            <div class="info">
-                                <h3>Git Avanzado</h3>
-                                <p>Rebase, Stash y comandos de rescate.</p>
-                            </div>
-                            <div class="status">Ver clase</div>
-                        </a>
-                        <a href="https://www.youtube.com/watch?v=V6eyFytgfbM" target="_blank" class="course-card">
-                            <div class="date">10 Abr</div>
-                            <div class="info">
-                                <h3>Configuración HTML, CSS y XAMPP</h3>
-                                <p>Configuración básica de entornos web usando XAMPP.</p>
-                            </div>
-                            <div class="status">Ver clase</div>
-                        </a>
-                        <a href="https://www.youtube.com/watch?v=q9yk0U9vtcc" target="_blank" class="course-card">
-                            <div class="date">10 Abr</div>
-                            <div class="info">
-                                <h3>Introducción al Campus Virtual y Cursos MOOC</h3>
-                                <p>Guía de acceso a la plataforma virtual de aprendizaje.</p>
-                            </div>
-                            <div class="status">Ver clase</div>
-                        </a>
-                        <a href="#" target="_blank" class="course-card">
-                            <div class="date">15 Abr</div>
-                            <div class="info">
-                                <h3>Titulo pendiente</h3>
-                                <p>Pendiente la descripcion del titulo.</p>
-                            </div>
-                            <div class="status">Ver clase</div>
-                        </a>
-                        <a href="#" target="_blank" class="course-card">
-                            <div class="date">16 Abr</div>
-                            <div class="info">
-                                <h3>Titulo pendiente</h3>
-                                <p>Pendiente la descripcion del titulo.</p>
-                            </div>
-                            <div class="status">Ver clase</div>
-                        </a>
-                        <a href="#" target="_blank" class="course-card">
-                            <div class="date">17 Abr</div>
-                            <div class="info">
-                                <h3>Titulo pendiente</h3>
-                                <p>Pendiente la descripcion del titulo.</p>
-                            </div>
-                            <div class="status">Ver clase</div>
-                        </a>
-                        <a href="#" target="_blank" class="course-card">
-                            <div class="date">21 Abr</div>
-                            <div class="info">
-                                <h3>Titulo pendiente</h3>
-                                <p>Pendiente la descripcion del titulo.</p>
-                            </div>
-                            <div class="status">Ver clase</div>
-                        </a>
+                        <div class="course-card"><div class="date">01 Abr</div><div class="info"><h3>Configuracion de Visual Studio Code</h3><p>Configuracion inicial de entorno en VS Code, extensiones esenciales.</p></div><div class="buttons"><a href="https://www.youtube.com/watch?v=TQUvxF-h9D4" target="_blank" class="btn-clase">Ver clase</a><a href="https://docs.google.com/document/d/1yB04FFz97z5lTRdM10cExVnmaeUbmFAcCr-XDZAOMy8/edit?tab=t.0" target="_blank" class="btn-codigo">Ver codigo</a><label class="checkbox-label"><input type="checkbox" class="clase-checkbox" data-clase-id="01-abr-vscode"><span>Visto</span></label></div></div>
+                        <div class="course-card"><div class="date">03 Abr</div><div class="info"><h3>Algoritmos GIT Expo</h3><p>Diseño web con HTML y CSS aplicado a Git.</p></div><div class="buttons"><a href="https://www.youtube.com/watch?v=kMHqKAUXsco" target="_blank" class="btn-clase">Ver clase</a><a href="https://docs.google.com/document/d/1yB04FFz97z5lTRdM10cExVnmaeUbmFAcCr-XDZAOMy8/edit?tab=t.0" target="_blank" class="btn-codigo">Ver codigo</a><label class="checkbox-label"><input type="checkbox" class="clase-checkbox" data-clase-id="03-abr-git-expo"><span>Visto</span></label></div></div>
+                        <div class="course-card"><div class="date">08 Abr</div><div class="info"><h3>Git Avanzado</h3><p>Rebase, Stash y comandos de rescate en Git.</p></div><div class="buttons"><a href="https://www.youtube.com/watch?v=fYjwe9ky2oI" target="_blank" class="btn-clase">Ver clase</a><a href="https://docs.google.com/document/d/1yB04FFz97z5lTRdM10cExVnmaeUbmFAcCr-XDZAOMy8/edit?tab=t.0" target="_blank" class="btn-codigo">Ver codigo</a><label class="checkbox-label"><input type="checkbox" class="clase-checkbox" data-clase-id="08-abr-git-avanzado"><span>Visto</span></label></div></div>
+                        <div class="course-card"><div class="date">10 Abr</div><div class="info"><h3>Configuracion HTML, CSS y XAMPP</h3><p>Configuracion basica de entornos web usando XAMPP.</p></div><div class="buttons"><a href="https://www.youtube.com/watch?v=V6eyFytgfbM" target="_blank" class="btn-clase">Ver clase</a><a href="https://docs.google.com/document/d/1yB04FFz97z5lTRdM10cExVnmaeUbmFAcCr-XDZAOMy8/edit?tab=t.0" target="_blank" class="btn-codigo">Ver codigo</a><label class="checkbox-label"><input type="checkbox" class="clase-checkbox" data-clase-id="10-abr-xampp"><span>Visto</span></label></div></div>
+                        <div class="course-card"><div class="date">10 Abr</div><div class="info"><h3>Introduccion al Campus Virtual</h3><p>Guia de acceso a la plataforma virtual de aprendizaje.</p></div><div class="buttons"><a href="https://www.youtube.com/watch?v=q9yk0U9vtcc" target="_blank" class="btn-clase">Ver clase</a><a href="https://docs.google.com/document/d/1yB04FFz97z5lTRdM10cExVnmaeUbmFAcCr-XDZAOMy8/edit?tab=t.0" target="_blank" class="btn-codigo">Ver codigo</a><label class="checkbox-label"><input type="checkbox" class="clase-checkbox" data-clase-id="10-abr-campus"><span>Visto</span></label></div></div>
+                        <div class="course-card"><div class="date">15 Abr</div><div class="info"><h3>Introduccion a Bases de Datos</h3><p>Conceptos basicos de bases de datos relacionales y no relacionales.</p></div><div class="buttons"><a href="#" target="_blank" class="btn-clase">Ver clase</a><a href="https://docs.google.com/document/d/1yB04FFz97z5lTRdM10cExVnmaeUbmFAcCr-XDZAOMy8/edit?tab=t.0" target="_blank" class="btn-codigo">Ver codigo</a><label class="checkbox-label"><input type="checkbox" class="clase-checkbox" data-clase-id="15-abr-bd"><span>Visto</span></label></div></div>
+                        <div class="course-card"><div class="date">17 Abr</div><div class="info"><h3>Consultas SQL Basicas</h3><p>Aprendiendo SELECT, INSERT, UPDATE y DELETE.</p></div><div class="buttons"><a href="#" target="_blank" class="btn-clase">Ver clase</a><a href="https://docs.google.com/document/d/1yB04FFz97z5lTRdM10cExVnmaeUbmFAcCr-XDZAOMy8/edit?tab=t.0" target="_blank" class="btn-codigo">Ver codigo</a><label class="checkbox-label"><input type="checkbox" class="clase-checkbox" data-clase-id="17-abr-sql"><span>Visto</span></label></div></div>
+                        <div class="course-card"><div class="date">22 Abr</div><div class="info"><h3>Introduccion a Node.js</h3><p>Primeros pasos con JavaScript en el servidor.</p></div><div class="buttons"><a href="#" target="_blank" class="btn-clase">Ver clase</a><a href="https://docs.google.com/document/d/1yB04FFz97z5lTRdM10cExVnmaeUbmFAcCr-XDZAOMy8/edit?tab=t.0" target="_blank" class="btn-codigo">Ver codigo</a><label class="checkbox-label"><input type="checkbox" class="clase-checkbox" data-clase-id="22-abr-node"><span>Visto</span></label></div></div>
+                        <div class="course-card"><div class="date">24 Abr</div><div class="info"><h3>Creacion de API con Express</h3><p>Construyendo rutas y controladores en Node.js.</p></div><div class="buttons"><a href="#" target="_blank" class="btn-clase">Ver clase</a><a href="https://docs.google.com/document/d/1yB04FFz97z5lTRdM10cExVnmaeUbmFAcCr-XDZAOMy8/edit?tab=t.0" target="_blank" class="btn-codigo">Ver codigo</a><label class="checkbox-label"><input type="checkbox" class="clase-checkbox" data-clase-id="24-abr-api"><span>Visto</span></label></div></div>
+                        <div class="course-card"><div class="date">29 Abr</div><div class="info"><h3>Autenticacion con JWT</h3><p>Protegiendo rutas y manejando sesiones de usuario.</p></div><div class="buttons"><a href="#" target="_blank" class="btn-clase">Ver clase</a><a href="https://docs.google.com/document/d/1yB04FFz97z5lTRdM10cExVnmaeUbmFAcCr-XDZAOMy8/edit?tab=t.0" target="_blank" class="btn-codigo">Ver codigo</a><label class="checkbox-label"><input type="checkbox" class="clase-checkbox" data-clase-id="29-abr-jwt"><span>Visto</span></label></div></div>
+                    </div>
+                </div>
+
+                <!-- ========== MAYO 2026 ========== -->
+                <div class="month-group" data-mes="Mayo 2026">
+                    <div class="month-header" onclick="toggleMonth(this)">
+                        <div class="month-title">Mayo 2026</div>
+                        <span class="icon">▼</span>
+                    </div>
+                    <div class="month-content">
+                        <div class="course-card"><div class="date">01 May</div><div class="info"><h3>Titulo pendiente</h3><p>Descripcion pendiente</p></div><div class="buttons"><a href="#" target="_blank" class="btn-clase">Ver clase</a><a href="https://docs.google.com/document/d/1yB04FFz97z5lTRdM10cExVnmaeUbmFAcCr-XDZAOMy8/edit?tab=t.0" target="_blank" class="btn-codigo">Ver codigo</a><label class="checkbox-label"><input type="checkbox" class="clase-checkbox" data-clase-id="01-may-pendiente"><span>Visto</span></label></div></div>
+                        <div class="course-card"><div class="date">06 May</div><div class="info"><h3>Titulo pendiente</h3><p>Descripcion pendiente</p></div><div class="buttons"><a href="#" target="_blank" class="btn-clase">Ver clase</a><a href="https://docs.google.com/document/d/1yB04FFz97z5lTRdM10cExVnmaeUbmFAcCr-XDZAOMy8/edit?tab=t.0" target="_blank" class="btn-codigo">Ver codigo</a><label class="checkbox-label"><input type="checkbox" class="clase-checkbox" data-clase-id="06-may-pendiente"><span>Visto</span></label></div></div>
+                        <div class="course-card"><div class="date">08 May</div><div class="info"><h3>Titulo pendiente</h3><p>Descripcion pendiente</p></div><div class="buttons"><a href="#" target="_blank" class="btn-clase">Ver clase</a><a href="https://docs.google.com/document/d/1yB04FFz97z5lTRdM10cExVnmaeUbmFAcCr-XDZAOMy8/edit?tab=t.0" target="_blank" class="btn-codigo">Ver codigo</a><label class="checkbox-label"><input type="checkbox" class="clase-checkbox" data-clase-id="08-may-pendiente"><span>Visto</span></label></div></div>
+                        <div class="course-card"><div class="date">13 May</div><div class="info"><h3>Titulo pendiente</h3><p>Descripcion pendiente</p></div><div class="buttons"><a href="#" target="_blank" class="btn-clase">Ver clase</a><a href="https://docs.google.com/document/d/1yB04FFz97z5lTRdM10cExVnmaeUbmFAcCr-XDZAOMy8/edit?tab=t.0" target="_blank" class="btn-codigo">Ver codigo</a><label class="checkbox-label"><input type="checkbox" class="clase-checkbox" data-clase-id="13-may-pendiente"><span>Visto</span></label></div></div>
+                        <div class="course-card"><div class="date">15 May</div><div class="info"><h3>Titulo pendiente</h3><p>Descripcion pendiente</p></div><div class="buttons"><a href="#" target="_blank" class="btn-clase">Ver clase</a><a href="https://docs.google.com/document/d/1yB04FFz97z5lTRdM10cExVnmaeUbmFAcCr-XDZAOMy8/edit?tab=t.0" target="_blank" class="btn-codigo">Ver codigo</a><label class="checkbox-label"><input type="checkbox" class="clase-checkbox" data-clase-id="15-may-pendiente"><span>Visto</span></label></div></div>
+                        <div class="course-card"><div class="date">20 May</div><div class="info"><h3>Titulo pendiente</h3><p>Descripcion pendiente</p></div><div class="buttons"><a href="#" target="_blank" class="btn-clase">Ver clase</a><a href="https://docs.google.com/document/d/1yB04FFz97z5lTRdM10cExVnmaeUbmFAcCr-XDZAOMy8/edit?tab=t.0" target="_blank" class="btn-codigo">Ver codigo</a><label class="checkbox-label"><input type="checkbox" class="clase-checkbox" data-clase-id="20-may-pendiente"><span>Visto</span></label></div></div>
+                        <div class="course-card"><div class="date">22 May</div><div class="info"><h3>Titulo pendiente</h3><p>Descripcion pendiente</p></div><div class="buttons"><a href="#" target="_blank" class="btn-clase">Ver clase</a><a href="https://docs.google.com/document/d/1yB04FFz97z5lTRdM10cExVnmaeUbmFAcCr-XDZAOMy8/edit?tab=t.0" target="_blank" class="btn-codigo">Ver codigo</a><label class="checkbox-label"><input type="checkbox" class="clase-checkbox" data-clase-id="22-may-pendiente"><span>Visto</span></label></div></div>
+                        <div class="course-card"><div class="date">27 May</div><div class="info"><h3>Titulo pendiente</h3><p>Descripcion pendiente</p></div><div class="buttons"><a href="#" target="_blank" class="btn-clase">Ver clase</a><a href="https://docs.google.com/document/d/1yB04FFz97z5lTRdM10cExVnmaeUbmFAcCr-XDZAOMy8/edit?tab=t.0" target="_blank" class="btn-codigo">Ver codigo</a><label class="checkbox-label"><input type="checkbox" class="clase-checkbox" data-clase-id="27-may-pendiente"><span>Visto</span></label></div></div>
+                        <div class="course-card"><div class="date">29 May</div><div class="info"><h3>Titulo pendiente</h3><p>Descripcion pendiente</p></div><div class="buttons"><a href="#" target="_blank" class="btn-clase">Ver clase</a><a href="https://docs.google.com/document/d/1yB04FFz97z5lTRdM10cExVnmaeUbmFAcCr-XDZAOMy8/edit?tab=t.0" target="_blank" class="btn-codigo">Ver codigo</a><label class="checkbox-label"><input type="checkbox" class="clase-checkbox" data-clase-id="29-may-pendiente"><span>Visto</span></label></div></div>
+                    </div>
+                </div>
+
+                <!-- ========== JUNIO 2026 ========== -->
+                <div class="month-group" data-mes="Junio 2026">
+                    <div class="month-header" onclick="toggleMonth(this)">
+                        <div class="month-title">Junio 2026</div>
+                        <span class="icon">▼</span>
+                    </div>
+                    <div class="month-content">
+                        <div class="course-card"><div class="date">03 Jun</div><div class="info"><h3>Titulo pendiente</h3><p>Descripcion pendiente</p></div><div class="buttons"><a href="#" target="_blank" class="btn-clase">Ver clase</a><a href="https://docs.google.com/document/d/1yB04FFz97z5lTRdM10cExVnmaeUbmFAcCr-XDZAOMy8/edit?tab=t.0" target="_blank" class="btn-codigo">Ver codigo</a><label class="checkbox-label"><input type="checkbox" class="clase-checkbox" data-clase-id="03-jun-pendiente"><span>Visto</span></label></div></div>
+                        <div class="course-card"><div class="date">05 Jun</div><div class="info"><h3>Titulo pendiente</h3><p>Descripcion pendiente</p></div><div class="buttons"><a href="#" target="_blank" class="btn-clase">Ver clase</a><a href="https://docs.google.com/document/d/1yB04FFz97z5lTRdM10cExVnmaeUbmFAcCr-XDZAOMy8/edit?tab=t.0" target="_blank" class="btn-codigo">Ver codigo</a><label class="checkbox-label"><input type="checkbox" class="clase-checkbox" data-clase-id="05-jun-pendiente"><span>Visto</span></label></div></div>
+                        <div class="course-card"><div class="date">10 Jun</div><div class="info"><h3>Titulo pendiente</h3><p>Descripcion pendiente</p></div><div class="buttons"><a href="#" target="_blank" class="btn-clase">Ver clase</a><a href="https://docs.google.com/document/d/1yB04FFz97z5lTRdM10cExVnmaeUbmFAcCr-XDZAOMy8/edit?tab=t.0" target="_blank" class="btn-codigo">Ver codigo</a><label class="checkbox-label"><input type="checkbox" class="clase-checkbox" data-clase-id="10-jun-pendiente"><span>Visto</span></label></div></div>
+                        <div class="course-card"><div class="date">12 Jun</div><div class="info"><h3>Titulo pendiente</h3><p>Descripcion pendiente</p></div><div class="buttons"><a href="#" target="_blank" class="btn-clase">Ver clase</a><a href="https://docs.google.com/document/d/1yB04FFz97z5lTRdM10cExVnmaeUbmFAcCr-XDZAOMy8/edit?tab=t.0" target="_blank" class="btn-codigo">Ver codigo</a><label class="checkbox-label"><input type="checkbox" class="clase-checkbox" data-clase-id="12-jun-pendiente"><span>Visto</span></label></div></div>
+                        <div class="course-card"><div class="date">17 Jun</div><div class="info"><h3>Titulo pendiente</h3><p>Descripcion pendiente</p></div><div class="buttons"><a href="#" target="_blank" class="btn-clase">Ver clase</a><a href="https://docs.google.com/document/d/1yB04FFz97z5lTRdM10cExVnmaeUbmFAcCr-XDZAOMy8/edit?tab=t.0" target="_blank" class="btn-codigo">Ver codigo</a><label class="checkbox-label"><input type="checkbox" class="clase-checkbox" data-clase-id="17-jun-pendiente"><span>Visto</span></label></div></div>
+                        <div class="course-card"><div class="date">19 Jun</div><div class="info"><h3>Titulo pendiente</h3><p>Descripcion pendiente</p></div><div class="buttons"><a href="#" target="_blank" class="btn-clase">Ver clase</a><a href="https://docs.google.com/document/d/1yB04FFz97z5lTRdM10cExVnmaeUbmFAcCr-XDZAOMy8/edit?tab=t.0" target="_blank" class="btn-codigo">Ver codigo</a><label class="checkbox-label"><input type="checkbox" class="clase-checkbox" data-clase-id="19-jun-pendiente"><span>Visto</span></label></div></div>
+                        <div class="course-card"><div class="date">24 Jun</div><div class="info"><h3>Titulo pendiente</h3><p>Descripcion pendiente</p></div><div class="buttons"><a href="#" target="_blank" class="btn-clase">Ver clase</a><a href="https://docs.google.com/document/d/1yB04FFz97z5lTRdM10cExVnmaeUbmFAcCr-XDZAOMy8/edit?tab=t.0" target="_blank" class="btn-codigo">Ver codigo</a><label class="checkbox-label"><input type="checkbox" class="clase-checkbox" data-clase-id="24-jun-pendiente"><span>Visto</span></label></div></div>
+                        <div class="course-card"><div class="date">26 Jun</div><div class="info"><h3>Titulo pendiente</h3><p>Descripcion pendiente</p></div><div class="buttons"><a href="#" target="_blank" class="btn-clase">Ver clase</a><a href="https://docs.google.com/document/d/1yB04FFz97z5lTRdM10cExVnmaeUbmFAcCr-XDZAOMy8/edit?tab=t.0" target="_blank" class="btn-codigo">Ver codigo</a><label class="checkbox-label"><input type="checkbox" class="clase-checkbox" data-clase-id="26-jun-pendiente"><span>Visto</span></label></div></div>
+                    </div>
+                </div>
+
+                <!-- ========== JULIO 2026 ========== -->
+                <div class="month-group" data-mes="Julio 2026">
+                    <div class="month-header" onclick="toggleMonth(this)">
+                        <div class="month-title">Julio 2026</div>
+                        <span class="icon">▼</span>
+                    </div>
+                    <div class="month-content">
+                        <div class="course-card"><div class="date">01 Jul</div><div class="info"><h3>Titulo pendiente</h3><p>Descripcion pendiente</p></div><div class="buttons"><a href="#" target="_blank" class="btn-clase">Ver clase</a><a href="https://docs.google.com/document/d/1yB04FFz97z5lTRdM10cExVnmaeUbmFAcCr-XDZAOMy8/edit?tab=t.0" target="_blank" class="btn-codigo">Ver codigo</a><label class="checkbox-label"><input type="checkbox" class="clase-checkbox" data-clase-id="01-jul-pendiente"><span>Visto</span></label></div></div>
+                        <div class="course-card"><div class="date">03 Jul</div><div class="info"><h3>Titulo pendiente</h3><p>Descripcion pendiente</p></div><div class="buttons"><a href="#" target="_blank" class="btn-clase">Ver clase</a><a href="https://docs.google.com/document/d/1yB04FFz97z5lTRdM10cExVnmaeUbmFAcCr-XDZAOMy8/edit?tab=t.0" target="_blank" class="btn-codigo">Ver codigo</a><label class="checkbox-label"><input type="checkbox" class="clase-checkbox" data-clase-id="03-jul-pendiente"><span>Visto</span></label></div></div>
+                        <div class="course-card"><div class="date">08 Jul</div><div class="info"><h3>Titulo pendiente</h3><p>Descripcion pendiente</p></div><div class="buttons"><a href="#" target="_blank" class="btn-clase">Ver clase</a><a href="https://docs.google.com/document/d/1yB04FFz97z5lTRdM10cExVnmaeUbmFAcCr-XDZAOMy8/edit?tab=t.0" target="_blank" class="btn-codigo">Ver codigo</a><label class="checkbox-label"><input type="checkbox" class="clase-checkbox" data-clase-id="08-jul-pendiente"><span>Visto</span></label></div></div>
+                        <div class="course-card"><div class="date">10 Jul</div><div class="info"><h3>Titulo pendiente</h3><p>Descripcion pendiente</p></div><div class="buttons"><a href="#" target="_blank" class="btn-clase">Ver clase</a><a href="https://docs.google.com/document/d/1yB04FFz97z5lTRdM10cExVnmaeUbmFAcCr-XDZAOMy8/edit?tab=t.0" target="_blank" class="btn-codigo">Ver codigo</a><label class="checkbox-label"><input type="checkbox" class="clase-checkbox" data-clase-id="10-jul-pendiente"><span>Visto</span></label></div></div>
+                        <div class="course-card"><div class="date">15 Jul</div><div class="info"><h3>Titulo pendiente</h3><p>Descripcion pendiente</p></div><div class="buttons"><a href="#" target="_blank" class="btn-clase">Ver clase</a><a href="https://docs.google.com/document/d/1yB04FFz97z5lTRdM10cExVnmaeUbmFAcCr-XDZAOMy8/edit?tab=t.0" target="_blank" class="btn-codigo">Ver codigo</a><label class="checkbox-label"><input type="checkbox" class="clase-checkbox" data-clase-id="15-jul-pendiente"><span>Visto</span></label></div></div>
+                        <div class="course-card"><div class="date">17 Jul</div><div class="info"><h3>Titulo pendiente</h3><p>Descripcion pendiente</p></div><div class="buttons"><a href="#" target="_blank" class="btn-clase">Ver clase</a><a href="https://docs.google.com/document/d/1yB04FFz97z5lTRdM10cExVnmaeUbmFAcCr-XDZAOMy8/edit?tab=t.0" target="_blank" class="btn-codigo">Ver codigo</a><label class="checkbox-label"><input type="checkbox" class="clase-checkbox" data-clase-id="17-jul-pendiente"><span>Visto</span></label></div></div>
+                        <div class="course-card"><div class="date">22 Jul</div><div class="info"><h3>Titulo pendiente</h3><p>Descripcion pendiente</p></div><div class="buttons"><a href="#" target="_blank" class="btn-clase">Ver clase</a><a href="https://docs.google.com/document/d/1yB04FFz97z5lTRdM10cExVnmaeUbmFAcCr-XDZAOMy8/edit?tab=t.0" target="_blank" class="btn-codigo">Ver codigo</a><label class="checkbox-label"><input type="checkbox" class="clase-checkbox" data-clase-id="22-jul-pendiente"><span>Visto</span></label></div></div>
+                        <div class="course-card"><div class="date">24 Jul</div><div class="info"><h3>Titulo pendiente</h3><p>Descripcion pendiente</p></div><div class="buttons"><a href="#" target="_blank" class="btn-clase">Ver clase</a><a href="https://docs.google.com/document/d/1yB04FFz97z5lTRdM10cExVnmaeUbmFAcCr-XDZAOMy8/edit?tab=t.0" target="_blank" class="btn-codigo">Ver codigo</a><label class="checkbox-label"><input type="checkbox" class="clase-checkbox" data-clase-id="24-jul-pendiente"><span>Visto</span></label></div></div>
+                        <div class="course-card"><div class="date">29 Jul</div><div class="info"><h3>Titulo pendiente</h3><p>Descripcion pendiente</p></div><div class="buttons"><a href="#" target="_blank" class="btn-clase">Ver clase</a><a href="https://docs.google.com/document/d/1yB04FFz97z5lTRdM10cExVnmaeUbmFAcCr-XDZAOMy8/edit?tab=t.0" target="_blank" class="btn-codigo">Ver codigo</a><label class="checkbox-label"><input type="checkbox" class="clase-checkbox" data-clase-id="29-jul-pendiente"><span>Visto</span></label></div></div>
+                        <div class="course-card"><div class="date">31 Jul</div><div class="info"><h3>Titulo pendiente</h3><p>Descripcion pendiente</p></div><div class="buttons"><a href="#" target="_blank" class="btn-clase">Ver clase</a><a href="https://docs.google.com/document/d/1yB04FFz97z5lTRdM10cExVnmaeUbmFAcCr-XDZAOMy8/edit?tab=t.0" target="_blank" class="btn-codigo">Ver codigo</a><label class="checkbox-label"><input type="checkbox" class="clase-checkbox" data-clase-id="31-jul-pendiente"><span>Visto</span></label></div></div>
+                    </div>
+                </div>
+
+                <!-- ========== AGOSTO 2026 ========== -->
+                <div class="month-group" data-mes="Agosto 2026">
+                    <div class="month-header" onclick="toggleMonth(this)">
+                        <div class="month-title">Agosto 2026</div>
+                        <span class="icon">▼</span>
+                    </div>
+                    <div class="month-content">
+                        <div class="course-card"><div class="date">05 Ago</div><div class="info"><h3>Titulo pendiente</h3><p>Descripcion pendiente</p></div><div class="buttons"><a href="#" target="_blank" class="btn-clase">Ver clase</a><a href="https://docs.google.com/document/d/1yB04FFz97z5lTRdM10cExVnmaeUbmFAcCr-XDZAOMy8/edit?tab=t.0" target="_blank" class="btn-codigo">Ver codigo</a><label class="checkbox-label"><input type="checkbox" class="clase-checkbox" data-clase-id="05-ago-pendiente"><span>Visto</span></label></div></div>
+                        <div class="course-card"><div class="date">07 Ago</div><div class="info"><h3>Titulo pendiente</h3><p>Descripcion pendiente</p></div><div class="buttons"><a href="#" target="_blank" class="btn-clase">Ver clase</a><a href="https://docs.google.com/document/d/1yB04FFz97z5lTRdM10cExVnmaeUbmFAcCr-XDZAOMy8/edit?tab=t.0" target="_blank" class="btn-codigo">Ver codigo</a><label class="checkbox-label"><input type="checkbox" class="clase-checkbox" data-clase-id="07-ago-pendiente"><span>Visto</span></label></div></div>
+                        <div class="course-card"><div class="date">12 Ago</div><div class="info"><h3>Titulo pendiente</h3><p>Descripcion pendiente</p></div><div class="buttons"><a href="#" target="_blank" class="btn-clase">Ver clase</a><a href="https://docs.google.com/document/d/1yB04FFz97z5lTRdM10cExVnmaeUbmFAcCr-XDZAOMy8/edit?tab=t.0" target="_blank" class="btn-codigo">Ver codigo</a><label class="checkbox-label"><input type="checkbox" class="clase-checkbox" data-clase-id="12-ago-pendiente"><span>Visto</span></label></div></div>
+                        <div class="course-card"><div class="date">14 Ago</div><div class="info"><h3>Titulo pendiente</h3><p>Descripcion pendiente</p></div><div class="buttons"><a href="#" target="_blank" class="btn-clase">Ver clase</a><a href="https://docs.google.com/document/d/1yB04FFz97z5lTRdM10cExVnmaeUbmFAcCr-XDZAOMy8/edit?tab=t.0" target="_blank" class="btn-codigo">Ver codigo</a><label class="checkbox-label"><input type="checkbox" class="clase-checkbox" data-clase-id="14-ago-pendiente"><span>Visto</span></label></div></div>
+                        <div class="course-card"><div class="date">19 Ago</div><div class="info"><h3>Titulo pendiente</h3><p>Descripcion pendiente</p></div><div class="buttons"><a href="#" target="_blank" class="btn-clase">Ver clase</a><a href="https://docs.google.com/document/d/1yB04FFz97z5lTRdM10cExVnmaeUbmFAcCr-XDZAOMy8/edit?tab=t.0" target="_blank" class="btn-codigo">Ver codigo</a><label class="checkbox-label"><input type="checkbox" class="clase-checkbox" data-clase-id="19-ago-pendiente"><span>Visto</span></label></div></div>
+                        <div class="course-card"><div class="date">21 Ago</div><div class="info"><h3>Titulo pendiente</h3><p>Descripcion pendiente</p></div><div class="buttons"><a href="#" target="_blank" class="btn-clase">Ver clase</a><a href="https://docs.google.com/document/d/1yB04FFz97z5lTRdM10cExVnmaeUbmFAcCr-XDZAOMy8/edit?tab=t.0" target="_blank" class="btn-codigo">Ver codigo</a><label class="checkbox-label"><input type="checkbox" class="clase-checkbox" data-clase-id="21-ago-pendiente"><span>Visto</span></label></div></div>
+                        <div class="course-card"><div class="date">26 Ago</div><div class="info"><h3>Titulo pendiente</h3><p>Descripcion pendiente</p></div><div class="buttons"><a href="#" target="_blank" class="btn-clase">Ver clase</a><a href="https://docs.google.com/document/d/1yB04FFz97z5lTRdM10cExVnmaeUbmFAcCr-XDZAOMy8/edit?tab=t.0" target="_blank" class="btn-codigo">Ver codigo</a><label class="checkbox-label"><input type="checkbox" class="clase-checkbox" data-clase-id="26-ago-pendiente"><span>Visto</span></label></div></div>
+                        <div class="course-card"><div class="date">28 Ago</div><div class="info"><h3>Titulo pendiente</h3><p>Descripcion pendiente</p></div><div class="buttons"><a href="#" target="_blank" class="btn-clase">Ver clase</a><a href="https://docs.google.com/document/d/1yB04FFz97z5lTRdM10cExVnmaeUbmFAcCr-XDZAOMy8/edit?tab=t.0" target="_blank" class="btn-codigo">Ver codigo</a><label class="checkbox-label"><input type="checkbox" class="clase-checkbox" data-clase-id="28-ago-pendiente"><span>Visto</span></label></div></div>
+                    </div>
+                </div>
+
+                <!-- ========== SEPTIEMBRE 2026 ========== -->
+                <div class="month-group" data-mes="Septiembre 2026">
+                    <div class="month-header" onclick="toggleMonth(this)">
+                        <div class="month-title">Septiembre 2026</div>
+                        <span class="icon">▼</span>
+                    </div>
+                    <div class="month-content">
+                        <div class="course-card"><div class="date">02 Sep</div><div class="info"><h3>Titulo pendiente</h3><p>Descripcion pendiente</p></div><div class="buttons"><a href="#" target="_blank" class="btn-clase">Ver clase</a><a href="https://docs.google.com/document/d/1yB04FFz97z5lTRdM10cExVnmaeUbmFAcCr-XDZAOMy8/edit?tab=t.0" target="_blank" class="btn-codigo">Ver codigo</a><label class="checkbox-label"><input type="checkbox" class="clase-checkbox" data-clase-id="02-sep-pendiente"><span>Visto</span></label></div></div>
+                        <div class="course-card"><div class="date">04 Sep</div><div class="info"><h3>Titulo pendiente</h3><p>Descripcion pendiente</p></div><div class="buttons"><a href="#" target="_blank" class="btn-clase">Ver clase</a><a href="https://docs.google.com/document/d/1yB04FFz97z5lTRdM10cExVnmaeUbmFAcCr-XDZAOMy8/edit?tab=t.0" target="_blank" class="btn-codigo">Ver codigo</a><label class="checkbox-label"><input type="checkbox" class="clase-checkbox" data-clase-id="04-sep-pendiente"><span>Visto</span></label></div></div>
+                        <div class="course-card"><div class="date">09 Sep</div><div class="info"><h3>Titulo pendiente</h3><p>Descripcion pendiente</p></div><div class="buttons"><a href="#" target="_blank" class="btn-clase">Ver clase</a><a href="https://docs.google.com/document/d/1yB04FFz97z5lTRdM10cExVnmaeUbmFAcCr-XDZAOMy8/edit?tab=t.0" target="_blank" class="btn-codigo">Ver codigo</a><label class="checkbox-label"><input type="checkbox" class="clase-checkbox" data-clase-id="09-sep-pendiente"><span>Visto</span></label></div></div>
+                        <div class="course-card"><div class="date">11 Sep</div><div class="info"><h3>Titulo pendiente</h3><p>Descripcion pendiente</p></div><div class="buttons"><a href="#" target="_blank" class="btn-clase">Ver clase</a><a href="https://docs.google.com/document/d/1yB04FFz97z5lTRdM10cExVnmaeUbmFAcCr-XDZAOMy8/edit?tab=t.0" target="_blank" class="btn-codigo">Ver codigo</a><label class="checkbox-label"><input type="checkbox" class="clase-checkbox" data-clase-id="11-sep-pendiente"><span>Visto</span></label></div></div>
+                        <div class="course-card"><div class="date">16 Sep</div><div class="info"><h3>Titulo pendiente</h3><p>Descripcion pendiente</p></div><div class="buttons"><a href="#" target="_blank" class="btn-clase">Ver clase</a><a href="https://docs.google.com/document/d/1yB04FFz97z5lTRdM10cExVnmaeUbmFAcCr-XDZAOMy8/edit?tab=t.0" target="_blank" class="btn-codigo">Ver codigo</a><label class="checkbox-label"><input type="checkbox" class="clase-checkbox" data-clase-id="16-sep-pendiente"><span>Visto</span></label></div></div>
+                        <div class="course-card"><div class="date">18 Sep</div><div class="info"><h3>Titulo pendiente</h3><p>Descripcion pendiente</p></div><div class="buttons"><a href="#" target="_blank" class="btn-clase">Ver clase</a><a href="https://docs.google.com/document/d/1yB04FFz97z5lTRdM10cExVnmaeUbmFAcCr-XDZAOMy8/edit?tab=t.0" target="_blank" class="btn-codigo">Ver codigo</a><label class="checkbox-label"><input type="checkbox" class="clase-checkbox" data-clase-id="18-sep-pendiente"><span>Visto</span></label></div></div>
+                        <div class="course-card"><div class="date">23 Sep</div><div class="info"><h3>Titulo pendiente</h3><p>Descripcion pendiente</p></div><div class="buttons"><a href="#" target="_blank" class="btn-clase">Ver clase</a><a href="https://docs.google.com/document/d/1yB04FFz97z5lTRdM10cExVnmaeUbmFAcCr-XDZAOMy8/edit?tab=t.0" target="_blank" class="btn-codigo">Ver codigo</a><label class="checkbox-label"><input type="checkbox" class="clase-checkbox" data-clase-id="23-sep-pendiente"><span>Visto</span></label></div></div>
+                        <div class="course-card"><div class="date">25 Sep</div><div class="info"><h3>Titulo pendiente</h3><p>Descripcion pendiente</p></div><div class="buttons"><a href="#" target="_blank" class="btn-clase">Ver clase</a><a href="https://docs.google.com/document/d/1yB04FFz97z5lTRdM10cExVnmaeUbmFAcCr-XDZAOMy8/edit?tab=t.0" target="_blank" class="btn-codigo">Ver codigo</a><label class="checkbox-label"><input type="checkbox" class="clase-checkbox" data-clase-id="25-sep-pendiente"><span>Visto</span></label></div></div>
+                        <div class="course-card"><div class="date">30 Sep</div><div class="info"><h3>Titulo pendiente</h3><p>Descripcion pendiente</p></div><div class="buttons"><a href="#" target="_blank" class="btn-clase">Ver clase</a><a href="https://docs.google.com/document/d/1yB04FFz97z5lTRdM10cExVnmaeUbmFAcCr-XDZAOMy8/edit?tab=t.0" target="_blank" class="btn-codigo">Ver codigo</a><label class="checkbox-label"><input type="checkbox" class="clase-checkbox" data-clase-id="30-sep-pendiente"><span>Visto</span></label></div></div>
+                    </div>
+                </div>
+
+                <!-- ========== OCTUBRE 2026 ========== -->
+                <div class="month-group" data-mes="Octubre 2026">
+                    <div class="month-header" onclick="toggleMonth(this)">
+                        <div class="month-title">Octubre 2026</div>
+                        <span class="icon">▼</span>
+                    </div>
+                    <div class="month-content">
+                        <div class="course-card"><div class="date">02 Oct</div><div class="info"><h3>Titulo pendiente</h3><p>Descripcion pendiente</p></div><div class="buttons"><a href="#" target="_blank" class="btn-clase">Ver clase</a><a href="https://docs.google.com/document/d/1yB04FFz97z5lTRdM10cExVnmaeUbmFAcCr-XDZAOMy8/edit?tab=t.0" target="_blank" class="btn-codigo">Ver codigo</a><label class="checkbox-label"><input type="checkbox" class="clase-checkbox" data-clase-id="02-oct-pendiente"><span>Visto</span></label></div></div>
+                        <div class="course-card"><div class="date">07 Oct</div><div class="info"><h3>Titulo pendiente</h3><p>Descripcion pendiente</p></div><div class="buttons"><a href="#" target="_blank" class="btn-clase">Ver clase</a><a href="https://docs.google.com/document/d/1yB04FFz97z5lTRdM10cExVnmaeUbmFAcCr-XDZAOMy8/edit?tab=t.0" target="_blank" class="btn-codigo">Ver codigo</a><label class="checkbox-label"><input type="checkbox" class="clase-checkbox" data-clase-id="07-oct-pendiente"><span>Visto</span></label></div></div>
+                        <div class="course-card"><div class="date">09 Oct</div><div class="info"><h3>Titulo pendiente</h3><p>Descripcion pendiente</p></div><div class="buttons"><a href="#" target="_blank" class="btn-clase">Ver clase</a><a href="https://docs.google.com/document/d/1yB04FFz97z5lTRdM10cExVnmaeUbmFAcCr-XDZAOMy8/edit?tab=t.0" target="_blank" class="btn-codigo">Ver codigo</a><label class="checkbox-label"><input type="checkbox" class="clase-checkbox" data-clase-id="09-oct-pendiente"><span>Visto</span></label></div></div>
+                        <div class="course-card"><div class="date">14 Oct</div><div class="info"><h3>Titulo pendiente</h3><p>Descripcion pendiente</p></div><div class="buttons"><a href="#" target="_blank" class="btn-clase">Ver clase</a><a href="https://docs.google.com/document/d/1yB04FFz97z5lTRdM10cExVnmaeUbmFAcCr-XDZAOMy8/edit?tab=t.0" target="_blank" class="btn-codigo">Ver codigo</a><label class="checkbox-label"><input type="checkbox" class="clase-checkbox" data-clase-id="14-oct-pendiente"><span>Visto</span></label></div></div>
+                        <div class="course-card"><div class="date">16 Oct</div><div class="info"><h3>Titulo pendiente</h3><p>Descripcion pendiente</p></div><div class="buttons"><a href="#" target="_blank" class="btn-clase">Ver clase</a><a href="https://docs.google.com/document/d/1yB04FFz97z5lTRdM10cExVnmaeUbmFAcCr-XDZAOMy8/edit?tab=t.0" target="_blank" class="btn-codigo">Ver codigo</a><label class="checkbox-label"><input type="checkbox" class="clase-checkbox" data-clase-id="16-oct-pendiente"><span>Visto</span></label></div></div>
+                        <div class="course-card"><div class="date">21 Oct</div><div class="info"><h3>Titulo pendiente</h3><p>Descripcion pendiente</p></div><div class="buttons"><a href="#" target="_blank" class="btn-clase">Ver clase</a><a href="https://docs.google.com/document/d/1yB04FFz97z5lTRdM10cExVnmaeUbmFAcCr-XDZAOMy8/edit?tab=t.0" target="_blank" class="btn-codigo">Ver codigo</a><label class="checkbox-label"><input type="checkbox" class="clase-checkbox" data-clase-id="21-oct-pendiente"><span>Visto</span></label></div></div>
+                        <div class="course-card"><div class="date">23 Oct</div><div class="info"><h3>Titulo pendiente</h3><p>Descripcion pendiente</p></div><div class="buttons"><a href="#" target="_blank" class="btn-clase">Ver clase</a><a href="https://docs.google.com/document/d/1yB04FFz97z5lTRdM10cExVnmaeUbmFAcCr-XDZAOMy8/edit?tab=t.0" target="_blank" class="btn-codigo">Ver codigo</a><label class="checkbox-label"><input type="checkbox" class="clase-checkbox" data-clase-id="23-oct-pendiente"><span>Visto</span></label></div></div>
+                        <div class="course-card"><div class="date">28 Oct</div><div class="info"><h3>Titulo pendiente</h3><p>Descripcion pendiente</p></div><div class="buttons"><a href="#" target="_blank" class="btn-clase">Ver clase</a><a href="https://docs.google.com/document/d/1yB04FFz97z5lTRdM10cExVnmaeUbmFAcCr-XDZAOMy8/edit?tab=t.0" target="_blank" class="btn-codigo">Ver codigo</a><label class="checkbox-label"><input type="checkbox" class="clase-checkbox" data-clase-id="28-oct-pendiente"><span>Visto</span></label></div></div>
+                        <div class="course-card"><div class="date">30 Oct</div><div class="info"><h3>Titulo pendiente</h3><p>Descripcion pendiente</p></div><div class="buttons"><a href="#" target="_blank" class="btn-clase">Ver clase</a><a href="https://docs.google.com/document/d/1yB04FFz97z5lTRdM10cExVnmaeUbmFAcCr-XDZAOMy8/edit?tab=t.0" target="_blank" class="btn-codigo">Ver codigo</a><label class="checkbox-label"><input type="checkbox" class="clase-checkbox" data-clase-id="30-oct-pendiente"><span>Visto</span></label></div></div>
+                    </div>
+                </div>
+
+                <!-- ========== NOVIEMBRE 2026 ========== -->
+                <div class="month-group" data-mes="Noviembre 2026">
+                    <div class="month-header" onclick="toggleMonth(this)">
+                        <div class="month-title">Noviembre 2026</div>
+                        <span class="icon">▼</span>
+                    </div>
+                    <div class="month-content">
+                        <div class="course-card"><div class="date">04 Nov</div><div class="info"><h3>Titulo pendiente</h3><p>Descripcion pendiente</p></div><div class="buttons"><a href="#" target="_blank" class="btn-clase">Ver clase</a><a href="https://docs.google.com/document/d/1yB04FFz97z5lTRdM10cExVnmaeUbmFAcCr-XDZAOMy8/edit?tab=t.0" target="_blank" class="btn-codigo">Ver codigo</a><label class="checkbox-label"><input type="checkbox" class="clase-checkbox" data-clase-id="04-nov-pendiente"><span>Visto</span></label></div></div>
+                        <div class="course-card"><div class="date">06 Nov</div><div class="info"><h3>Titulo pendiente</h3><p>Descripcion pendiente</p></div><div class="buttons"><a href="#" target="_blank" class="btn-clase">Ver clase</a><a href="https://docs.google.com/document/d/1yB04FFz97z5lTRdM10cExVnmaeUbmFAcCr-XDZAOMy8/edit?tab=t.0" target="_blank" class="btn-codigo">Ver codigo</a><label class="checkbox-label"><input type="checkbox" class="clase-checkbox" data-clase-id="06-nov-pendiente"><span>Visto</span></label></div></div>
+                        <div class="course-card"><div class="date">11 Nov</div><div class="info"><h3>Titulo pendiente</h3><p>Descripcion pendiente</p></div><div class="buttons"><a href="#" target="_blank" class="btn-clase">Ver clase</a><a href="https://docs.google.com/document/d/1yB04FFz97z5lTRdM10cExVnmaeUbmFAcCr-XDZAOMy8/edit?tab=t.0" target="_blank" class="btn-codigo">Ver codigo</a><label class="checkbox-label"><input type="checkbox" class="clase-checkbox" data-clase-id="11-nov-pendiente"><span>Visto</span></label></div></div>
+                        <div class="course-card"><div class="date">13 Nov</div><div class="info"><h3>Titulo pendiente</h3><p>Descripcion pendiente</p></div><div class="buttons"><a href="#" target="_blank" class="btn-clase">Ver clase</a><a href="https://docs.google.com/document/d/1yB04FFz97z5lTRdM10cExVnmaeUbmFAcCr-XDZAOMy8/edit?tab=t.0" target="_blank" class="btn-codigo">Ver codigo</a><label class="checkbox-label"><input type="checkbox" class="clase-checkbox" data-clase-id="13-nov-pendiente"><span>Visto</span></label></div></div>
+                        <div class="course-card"><div class="date">18 Nov</div><div class="info"><h3>Titulo pendiente</h3><p>Descripcion pendiente</p></div><div class="buttons"><a href="#" target="_blank" class="btn-clase">Ver clase</a><a href="https://docs.google.com/document/d/1yB04FFz97z5lTRdM10cExVnmaeUbmFAcCr-XDZAOMy8/edit?tab=t.0" target="_blank" class="btn-codigo">Ver codigo</a><label class="checkbox-label"><input type="checkbox" class="clase-checkbox" data-clase-id="18-nov-pendiente"><span>Visto</span></label></div></div>
+                        <div class="course-card"><div class="date">20 Nov</div><div class="info"><h3>Titulo pendiente</h3><p>Descripcion pendiente</p></div><div class="buttons"><a href="#" target="_blank" class="btn-clase">Ver clase</a><a href="https://docs.google.com/document/d/1yB04FFz97z5lTRdM10cExVnmaeUbmFAcCr-XDZAOMy8/edit?tab=t.0" target="_blank" class="btn-codigo">Ver codigo</a><label class="checkbox-label"><input type="checkbox" class="clase-checkbox" data-clase-id="20-nov-pendiente"><span>Visto</span></label></div></div>
+                        <div class="course-card"><div class="date">25 Nov</div><div class="info"><h3>Titulo pendiente</h3><p>Descripcion pendiente</p></div><div class="buttons"><a href="#" target="_blank" class="btn-clase">Ver clase</a><a href="https://docs.google.com/document/d/1yB04FFz97z5lTRdM10cExVnmaeUbmFAcCr-XDZAOMy8/edit?tab=t.0" target="_blank" class="btn-codigo">Ver codigo</a><label class="checkbox-label"><input type="checkbox" class="clase-checkbox" data-clase-id="25-nov-pendiente"><span>Visto</span></label></div></div>
+                        <div class="course-card"><div class="date">27 Nov</div><div class="info"><h3>Titulo pendiente</h3><p>Descripcion pendiente</p></div><div class="buttons"><a href="#" target="_blank" class="btn-clase">Ver clase</a><a href="https://docs.google.com/document/d/1yB04FFz97z5lTRdM10cExVnmaeUbmFAcCr-XDZAOMy8/edit?tab=t.0" target="_blank" class="btn-codigo">Ver codigo</a><label class="checkbox-label"><input type="checkbox" class="clase-checkbox" data-clase-id="27-nov-pendiente"><span>Visto</span></label></div></div>
                     </div>
                 </div>
             </section>
         </main>
     </div>
 
-    <!-- PANTALLA FUNDAMENTOS -->
+    <!-- PANTALLA DE FUNDAMENTOS -->
     <div id="fundamentos-screen" class="info-panel hidden">
-        <div class="back-btn" id="back-home-fundamentos">Volver al inicio</div>
-        <div class="info-box">
-            <h2>Estamos trabajando en ello todavia</h2>
+        <div class="curso-container">
+            <h1 class="curso-titulo">Curso Completo: Desarrollo Full Stack con React</h1>
+            <p class="curso-subtitulo">Haz clic en cualquier tema para abrir el material de estudio en Google Docs</p>
+            
+            <div class="modulo-card"><div class="modulo-header" onclick="toggleModulo(this)"><h2>MODULO 1: Fundamentos de Programacion</h2><span class="modulo-icon">▼</span></div><div class="modulo-content"><a href="https://docs.google.com/document/d/1Jkr9UceAl0wblv3g8jBycMyxJum9ca5JtVO1TS06BMY/edit?tab=t.0" target="_blank" class="tema-link">1.1 Introduccion a la logica de programacion</a><a href="https://docs.google.com/document/d/1Jkr9UceAl0wblv3g8jBycMyxJum9ca5JtVO1TS06BMY/edit?tab=t.0" target="_blank" class="tema-link">1.2 Algoritmos y diagramas de flujo</a><a href="https://docs.google.com/document/d/1Jkr9UceAl0wblv3g8jBycMyxJum9ca5JtVO1TS06BMY/edit?tab=t.0" target="_blank" class="tema-link">1.3 Variables y tipos de datos</a><a href="https://docs.google.com/document/d/1Jkr9UceAl0wblv3g8jBycMyxJum9ca5JtVO1TS06BMY/edit?tab=t.0" target="_blank" class="tema-link">1.4 Operadores aritmeticos y logicos</a><a href="https://docs.google.com/document/d/1Jkr9UceAl0wblv3g8jBycMyxJum9ca5JtVO1TS06BMY/edit?tab=t.0" target="_blank" class="tema-link">1.5 Estructuras condicionales</a><a href="https://docs.google.com/document/d/1Jkr9UceAl0wblv3g8jBycMyxJum9ca5JtVO1TS06BMY/edit?tab=t.0" target="_blank" class="tema-link">1.6 Bucles e iteraciones</a><a href="https://docs.google.com/document/d/1Jkr9UceAl0wblv3g8jBycMyxJum9ca5JtVO1TS06BMY/edit?tab=t.0" target="_blank" class="tema-link">1.7 Arreglos y matrices</a><a href="https://docs.google.com/document/d/1Jkr9UceAl0wblv3g8jBycMyxJum9ca5JtVO1TS06BMY/edit?tab=t.0" target="_blank" class="tema-link">1.8 Funciones y procedimientos</a></div></div>
+            
+            <div class="modulo-card"><div class="modulo-header" onclick="toggleModulo(this)"><h2>MODULO 2: Desarrollo Web Frontend</h2><span class="modulo-icon">▼</span></div><div class="modulo-content"><a href="https://docs.google.com/document/d/1Jkr9UceAl0wblv3g8jBycMyxJum9ca5JtVO1TS06BMY/edit?tab=t.0" target="_blank" class="tema-link">2.1 Como funciona Internet</a><a href="https://docs.google.com/document/d/1Jkr9UceAl0wblv3g8jBycMyxJum9ca5JtVO1TS06BMY/edit?tab=t.0" target="_blank" class="tema-link">2.2 HTML5 estructura</a><a href="https://docs.google.com/document/d/1Jkr9UceAl0wblv3g8jBycMyxJum9ca5JtVO1TS06BMY/edit?tab=t.0" target="_blank" class="tema-link">2.3 CSS3 selectores</a><a href="https://docs.google.com/document/d/1Jkr9UceAl0wblv3g8jBycMyxJum9ca5JtVO1TS06BMY/edit?tab=t.0" target="_blank" class="tema-link">2.4 Flexbox y Grid</a><a href="https://docs.google.com/document/d/1Jkr9UceAl0wblv3g8jBycMyxJum9ca5JtVO1TS06BMY/edit?tab=t.0" target="_blank" class="tema-link">2.5 Diseño responsivo</a><a href="https://docs.google.com/document/d/1Jkr9UceAl0wblv3g8jBycMyxJum9ca5JtVO1TS06BMY/edit?tab=t.0" target="_blank" class="tema-link">2.6 Preprocesadores CSS</a><a href="https://docs.google.com/document/d/1Jkr9UceAl0wblv3g8jBycMyxJum9ca5JtVO1TS06BMY/edit?tab=t.0" target="_blank" class="tema-link">2.7 JavaScript DOM</a></div></div>
+            
+            <div class="modulo-card"><div class="modulo-header" onclick="toggleModulo(this)"><h2>MODULO 3: Frontend con React</h2><span class="modulo-icon">▼</span></div><div class="modulo-content"><a href="https://docs.google.com/document/d/1Jkr9UceAl0wblv3g8jBycMyxJum9ca5JtVO1TS06BMY/edit?tab=t.0" target="_blank" class="tema-link">3.1 Que es React</a><a href="https://docs.google.com/document/d/1Jkr9UceAl0wblv3g8jBycMyxJum9ca5JtVO1TS06BMY/edit?tab=t.0" target="_blank" class="tema-link">3.2 Componentes y JSX</a><a href="https://docs.google.com/document/d/1Jkr9UceAl0wblv3g8jBycMyxJum9ca5JtVO1TS06BMY/edit?tab=t.0" target="_blank" class="tema-link">3.3 Props y useState</a><a href="https://docs.google.com/document/d/1Jkr9UceAl0wblv3g8jBycMyxJum9ca5JtVO1TS06BMY/edit?tab=t.0" target="_blank" class="tema-link">3.4 useEffect</a><a href="https://docs.google.com/document/d/1Jkr9UceAl0wblv3g8jBycMyxJum9ca5JtVO1TS06BMY/edit?tab=t.0" target="_blank" class="tema-link">3.5 React Router</a><a href="https://docs.google.com/document/d/1Jkr9UceAl0wblv3g8jBycMyxJum9ca5JtVO1TS06BMY/edit?tab=t.0" target="_blank" class="tema-link">3.6 Context API</a></div></div>
+            
+            <div class="modulo-card"><div class="modulo-header" onclick="toggleModulo(this)"><h2>MODULO 4: Backend con Node.js</h2><span class="modulo-icon">▼</span></div><div class="modulo-content"><a href="https://docs.google.com/document/d/1Jkr9UceAl0wblv3g8jBycMyxJum9ca5JtVO1TS06BMY/edit?tab=t.0" target="_blank" class="tema-link">4.1 Introduccion a Node.js</a><a href="https://docs.google.com/document/d/1Jkr9UceAl0wblv3g8jBycMyxJum9ca5JtVO1TS06BMY/edit?tab=t.0" target="_blank" class="tema-link">4.2 Servidor con Express</a><a href="https://docs.google.com/document/d/1Jkr9UceAl0wblv3g8jBycMyxJum9ca5JtVO1TS06BMY/edit?tab=t.0" target="_blank" class="tema-link">4.3 Rutas y controladores</a><a href="https://docs.google.com/document/d/1Jkr9UceAl0wblv3g8jBycMyxJum9ca5JtVO1TS06BMY/edit?tab=t.0" target="_blank" class="tema-link">4.4 Autenticacion JWT</a></div></div>
+            
+            <div class="modulo-card"><div class="modulo-header" onclick="toggleModulo(this)"><h2>MODULO 5: Bases de Datos</h2><span class="modulo-icon">▼</span></div><div class="modulo-content"><a href="https://docs.google.com/document/d/1Jkr9UceAl0wblv3g8jBycMyxJum9ca5JtVO1TS06BMY/edit?tab=t.0" target="_blank" class="tema-link">5.1 SQL vs NoSQL</a><a href="https://docs.google.com/document/d/1Jkr9UceAl0wblv3g8jBycMyxJum9ca5JtVO1TS06BMY/edit?tab=t.0" target="_blank" class="tema-link">5.2 MySQL y PostgreSQL</a><a href="https://docs.google.com/document/d/1Jkr9UceAl0wblv3g8jBycMyxJum9ca5JtVO1TS06BMY/edit?tab=t.0" target="_blank" class="tema-link">5.3 Consultas SQL</a><a href="https://docs.google.com/document/d/1Jkr9UceAl0wblv3g8jBycMyxJum9ca5JtVO1TS06BMY/edit?tab=t.0" target="_blank" class="tema-link">5.4 MongoDB</a></div></div>
+            
+            <div class="modulo-card"><div class="modulo-header" onclick="toggleModulo(this)"><h2>MODULO 6: Git y GitHub</h2><span class="modulo-icon">▼</span></div><div class="modulo-content"><a href="https://docs.google.com/document/d/1Jkr9UceAl0wblv3g8jBycMyxJum9ca5JtVO1TS06BMY/edit?tab=t.0" target="_blank" class="tema-link">6.1 Instalacion y configuracion</a><a href="https://docs.google.com/document/d/1Jkr9UceAl0wblv3g8jBycMyxJum9ca5JtVO1TS06BMY/edit?tab=t.0" target="_blank" class="tema-link">6.2 Comandos basicos</a><a href="https://docs.google.com/document/d/1Jkr9UceAl0wblv3g8jBycMyxJum9ca5JtVO1TS06BMY/edit?tab=t.0" target="_blank" class="tema-link">6.3 Ramas y merge</a><a href="https://docs.google.com/document/d/1Jkr9UceAl0wblv3g8jBycMyxJum9ca5JtVO1TS06BMY/edit?tab=t.0" target="_blank" class="tema-link">6.4 GitHub remoto</a></div></div>
+            
+            <div class="modulo-card"><div class="modulo-header" onclick="toggleModulo(this)"><h2>MODULO 7: Herramientas del Ecosistema Web</h2><span class="modulo-icon">▼</span></div><div class="modulo-content"><a href="https://docs.google.com/document/d/1Jkr9UceAl0wblv3g8jBycMyxJum9ca5JtVO1TS06BMY/edit?tab=t.0" target="_blank" class="tema-link">7.1 Visual Studio Code</a><a href="https://docs.google.com/document/d/1Jkr9UceAl0wblv3g8jBycMyxJum9ca5JtVO1TS06BMY/edit?tab=t.0" target="_blank" class="tema-link">7.2 Servidores locales: XAMPP, Laragon</a><a href="https://docs.google.com/document/d/1Jkr9UceAl0wblv3g8jBycMyxJum9ca5JtVO1TS06BMY/edit?tab=t.0" target="_blank" class="tema-link">7.3 WordPress y competidores</a><a href="https://docs.google.com/document/d/1Jkr9UceAl0wblv3g8jBycMyxJum9ca5JtVO1TS06BMY/edit?tab=t.0" target="_blank" class="tema-link">7.4 Dominios y hosting</a><a href="https://docs.google.com/document/d/1Jkr9UceAl0wblv3g8jBycMyxJum9ca5JtVO1TS06BMY/edit?tab=t.0" target="_blank" class="tema-link">7.5 Automatizacion: n8n, Zapier</a></div></div>
+            
+            <div class="modulo-card"><div class="modulo-header" onclick="toggleModulo(this)"><h2>MODULO 8: Proyecto Final Full Stack</h2><span class="modulo-icon">▼</span></div><div class="modulo-content"><a href="https://docs.google.com/document/d/1Jkr9UceAl0wblv3g8jBycMyxJum9ca5JtVO1TS06BMY/edit?tab=t.0" target="_blank" class="tema-link">8.1 Estructura del proyecto</a><a href="https://docs.google.com/document/d/1Jkr9UceAl0wblv3g8jBycMyxJum9ca5JtVO1TS06BMY/edit?tab=t.0" target="_blank" class="tema-link">8.2 API REST</a><a href="https://docs.google.com/document/d/1Jkr9UceAl0wblv3g8jBycMyxJum9ca5JtVO1TS06BMY/edit?tab=t.0" target="_blank" class="tema-link">8.3 Conexion a BD</a><a href="https://docs.google.com/document/d/1Jkr9UceAl0wblv3g8jBycMyxJum9ca5JtVO1TS06BMY/edit?tab=t.0" target="_blank" class="tema-link">8.4 Autenticacion</a><a href="https://docs.google.com/document/d/1Jkr9UceAl0wblv3g8jBycMyxJum9ca5JtVO1TS06BMY/edit?tab=t.0" target="_blank" class="tema-link">8.5 Despliegue</a></div></div>
+            
+            <div class="modulo-card especial">
+                <div class="modulo-header" onclick="toggleModulo(this)">
+                    <h2>MODULO ESPECIAL: (Escribe aqui el titulo que quieras)</h2>
+                    <span class="modulo-icon">▼</span>
+                </div>
+                <div class="modulo-content">
+                    <a href="https://docs.google.com/document/d/1Jkr9UceAl0wblv3g8jBycMyxJum9ca5JtVO1TS06BMY/edit?tab=t.0" target="_blank" class="tema-link">Tema especial 1 - Escribe aqui lo que quieras</a>
+                    <a href="https://docs.google.com/document/d/1Jkr9UceAl0wblv3g8jBycMyxJum9ca5JtVO1TS06BMY/edit?tab=t.0" target="_blank" class="tema-link">Tema especial 2 - Escribe aqui lo que quieras</a>
+                    <a href="https://docs.google.com/document/d/1Jkr9UceAl0wblv3g8jBycMyxJum9ca5JtVO1TS06BMY/edit?tab=t.0" target="_blank" class="tema-link">Tema especial 3 - Escribe aqui lo que quieras</a>
+                </div>
+            </div>
         </div>
     </div>
 
     <!-- PANTALLA LINKS -->
     <div id="links-screen" class="info-panel hidden">
-        <div class="back-btn" id="back-home-links">Volver al inicio</div>
         <div class="links-box">
             <h2>Links de interes</h2>
             <ul>
-                <li><a href="https://www.w3schools.com/" target="_blank">Aprende diferentes lenguajes de programacion</a></li>
-                <li><a href="https://www.tutorialesprogramacionya.com/" target="_blank">Mis primeros pasos en la programación</a></li>
-                <li><a href="https://docs.emmet.io/cheat-sheet/" target="_blank">Comandos de programacion</a></li>
-                <li><a href="https://drive.google.com/drive/folders/1EQrk3M6dc4rTGN1gEiUSbTfr-qg_EiPg/" target="_blank">Recomenado por Francisco Javier</a></li>
-                <li><a href="https://virtual.bellasartes.edu.co/login/index.php/" target="_blank">Fundamentos de programacion por Jorge Mario (Bellas artes)  </a></li>
+                <li><a href="https://www.w3schools.com/" target="_blank">W3Schools - Aprende diferentes lenguajes</a></li>
+                <li><a href="https://www.tutorialesprogramacionya.com/" target="_blank">Tutoriales Programacion Ya</a></li>
+                <li><a href="https://docs.emmet.io/cheat-sheet/" target="_blank">Comandos de programacion (Emmet)</a></li>
+                <li><a href="https://drive.google.com/drive/folders/1EQrk3M6dc4rTGN1gEiUSbTfr-qg_EiPg/" target="_blank">Recomendado por Francisco Javier</a></li>
+                <li><a href="https://virtual.bellasartes.edu.co/login/index.php/" target="_blank">Fundamentos de programacion - Bellas Artes</a></li>
             </ul>
         </div>
     </div>
+
+    <button id="floating-back-btn" class="floating-back-btn hidden">Volver al inicio</button>
 
     <script src="script.js"></script>
 </body>
